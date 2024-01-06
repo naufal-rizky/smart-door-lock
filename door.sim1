@@ -1,0 +1,79 @@
+<circuit version="1.0.0-SR0" rev="1320" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-276,-212" rotation="90" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-19" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps itemtype="MCU" CircId="1_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="1_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" eeprom="49,50,51,52,53,54,0,0,0,0," Frequency="16 MHz" Program="door.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+</item>
+
+<item itemtype="Hd44780" CircId="Hd44780-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-88,-236" rotation="0" hflip="1" vflip="1" label="Hd44780-2" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2 _Rows" Cols="16 _Columns" />
+
+<item itemtype="KeyPad" CircId="KeyPad-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-284,-316" rotation="0" hflip="1" vflip="1" label="KeyPad-9" idLabPos="-8,-16" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="4 _Buttons" Cols="3 _Buttons" Key_Labels="123456789*0#" />
+
+<item itemtype="Push" CircId="Push-17" mainComp="false" Show_id="false" Show_Val="false" Pos="-108,76" rotation="0" hflip="1" vflip="1" label="Push-17" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="AudioOut" CircId="AudioOut-18" mainComp="false" Show_id="false" Show_Val="false" Pos="-120,-336" rotation="0" hflip="1" vflip="1" label="AudioOut-18" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" />
+
+<item itemtype="Capacitor" CircId="Capacitor-20" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="-160,-344" rotation="0" hflip="1" vflip="1" label="Capacitor-20" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Capacitance="10 µF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Steps" />
+
+<item itemtype="Servo" CircId="Servo-46" mainComp="false" Show_id="true" Show_Val="false" Pos="72,-140" rotation="-90" hflip="1" vflip="1" label="Servo-46" idLabPos="-16,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" Speed="0.2 _sec/60º" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1e+09 Ω" />
+
+<item itemtype="Led" CircId="Led-55" mainComp="false" Show_id="false" Show_Val="false" Pos="180,-188" rotation="0" hflip="1" vflip="1" label="Led-55" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Green" Grounded="true" Threshold="3.5 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Led" CircId="Led-56" mainComp="false" Show_id="false" Show_Val="false" Pos="180,-148" rotation="0" hflip="1" vflip="1" label="Led-56" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Red" Grounded="true" Threshold="1.8 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="ResistorDip" CircId="ResistorDip-59" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="128,-148" rotation="0" hflip="1" vflip="1" label="ResistorDip-59" idLabPos="-24,-40" labelrot="0" valLabPos="5,-26" valLabRot="90" Resistance="100 Ω" Size="2 _Resist." />
+
+<item itemtype="Node" CircId="Node-52" mainComp="false" Pos="-172,40" />
+
+<item itemtype="Connector" uid="connector-60" startpinid="Hd44780-2-PinRS" endpinid="Uno-1-A0" pointList="-72,-228,-72,-12,-140,-12,-140,-28" />
+
+<item itemtype="Connector" uid="connector-61" startpinid="Hd44780-2-PinEn" endpinid="Uno-1-A1" pointList="-56,-228,-56,-4,-132,-4,-132,-28" />
+
+<item itemtype="Connector" uid="connector-62" startpinid="Hd44780-2-dataPin4" endpinid="Uno-1-A2" pointList="-16,-228,-16,4,-124,4,-124,-28" />
+
+<item itemtype="Connector" uid="connector-63" startpinid="Hd44780-2-dataPin5" endpinid="Uno-1-A3" pointList="-8,-228,-8,12,-116,12,-116,-28" />
+
+<item itemtype="Connector" uid="connector-64" startpinid="Hd44780-2-dataPin6" endpinid="Uno-1-A4" pointList="0,-228,0,20,-108,20,-108,-28" />
+
+<item itemtype="Connector" uid="connector-65" startpinid="Hd44780-2-dataPin7" endpinid="Uno-1-A5" pointList="8,-228,8,28,-100,28,-100,-28" />
+
+<item itemtype="Connector" uid="connector-66" startpinid="KeyPad-9-Pin0" endpinid="Uno-1-9" pointList="-236,-308,-180,-308,-180,-172" />
+
+<item itemtype="Connector" uid="connector-67" startpinid="KeyPad-9-Pin1" endpinid="Uno-1-8" pointList="-236,-292,-172,-292,-172,-172" />
+
+<item itemtype="Connector" uid="connector-68" startpinid="KeyPad-9-Pin2" endpinid="Uno-1-7" pointList="-236,-276,-156,-276,-156,-172" />
+
+<item itemtype="Connector" uid="connector-69" startpinid="KeyPad-9-Pin3" endpinid="Uno-1-6" pointList="-236,-260,-148,-260,-148,-172" />
+
+<item itemtype="Connector" uid="connector-70" startpinid="KeyPad-9-Pin4" endpinid="Uno-1-5" pointList="-284,-244,-284,-228,-140,-228,-140,-172" />
+
+<item itemtype="Connector" uid="connector-71" startpinid="KeyPad-9-Pin5" endpinid="Uno-1-4" pointList="-268,-244,-268,-220,-132,-220,-132,-172" />
+
+<item itemtype="Connector" uid="connector-72" startpinid="KeyPad-9-Pin6" endpinid="Uno-1-3" pointList="-252,-244,-252,-212,-124,-212,-124,-172" />
+
+<item itemtype="Connector" uid="connector-73" startpinid="Capacitor-20-rPin" endpinid="AudioOut-18-lPin" pointList="-144,-344,-136,-344" />
+
+<item itemtype="Connector" uid="connector-74" startpinid="Capacitor-20-lPin" endpinid="Uno-1-11" pointList="-176,-344,-196,-344,-196,-172" />
+
+<item itemtype="Connector" uid="connector-75" startpinid="AudioOut-18-rPin" endpinid="Uno-1-GND2" pointList="-136,-336,-220,-336,-220,-172" />
+
+<item itemtype="Connector" uid="connector-76" startpinid="Servo-46-in0" endpinid="Uno-1-5V0" pointList="56,-92,56,52,-180,52,-180,-28" />
+
+<item itemtype="Connector" uid="connector-77" startpinid="Servo-46-in1" endpinid="Node-52-0" pointList="72,-92,72,40,-172,40" />
+
+<item itemtype="Connector" uid="connector-78" startpinid="Servo-46-in2" endpinid="Uno-1-2" pointList="88,-92,124,-92,124,-216,-116,-216,-116,-172" />
+
+<item itemtype="Connector" uid="connector-79" startpinid="Push-17-pinP0" endpinid="Node-52-1" pointList="-124,76,-172,76,-172,40" />
+
+<item itemtype="Connector" uid="connector-80" startpinid="Node-52-2" endpinid="Uno-1-GND1" pointList="-172,40,-172,-28" />
+
+<item itemtype="Connector" uid="connector-81" startpinid="Push-17-switch0pinN" endpinid="Uno-1-12" pointList="-92,76,-80,76,-80,-192,-204,-192,-204,-172" />
+
+<item itemtype="Connector" uid="connector-82" startpinid="Led-55-lPin" endpinid="ResistorDip-59-resistor0-ePin1" pointList="164,-188,144,-188,144,-172" />
+
+<item itemtype="Connector" uid="connector-83" startpinid="Led-56-lPin" endpinid="ResistorDip-59-resistor1-ePin3" pointList="164,-148,144,-148,144,-164" />
+
+<item itemtype="Connector" uid="connector-84" startpinid="ResistorDip-59-resistor0-ePin0" endpinid="Uno-1-13" pointList="112,-172,108,-172,108,-232,-212,-232,-212,-172" />
+
+<item itemtype="Connector" uid="connector-85" startpinid="ResistorDip-59-resistor1-ePin2" endpinid="Uno-1-10" pointList="112,-164,96,-164,96,-204,-188,-204,-188,-172" />
+
+</circuit>
